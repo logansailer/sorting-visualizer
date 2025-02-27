@@ -71,6 +71,13 @@ export const SortingAlgorithmProvider = ({
     setArrayToSort(tempArray);
     setIsAnimationComplete(false);
     setIsSorting(false);
+
+    //clears all timeouts to prevent the animations from running after the reset
+    const highestId = window.setTimeout(() => {
+      for (let i = highestId; i > 0; i--) {
+        window.clearTimeout(i);
+      }
+    }, 0);
   };
 
   const runAnimation = (animations: AnimationArrayType) => {
@@ -117,6 +124,26 @@ export const SortingAlgorithmProvider = ({
         }
       }, index * inverseSpeed);
     });
+
+    const finalTimeout = animations.length * inverseSpeed;
+
+    //plays animation for the final sorted array
+    setTimeout(() => {
+      Array.from(arrayLines).forEach((line) => {
+        line.classList.remove("bg-purple-800");
+        line.classList.add("pulse-animation", "changed-line-color");
+      });
+
+      //reset the color of the lines after final animation
+      setTimeout(() => {
+        Array.from(arrayLines).forEach((line) => {
+          line.classList.remove("pulse-animation", "changed-line-color");
+          line.classList.add("bg-purple-800");
+        });
+        setIsSorting(false);
+        setIsAnimationComplete(true);
+      }, 1000);
+    }, finalTimeout);
   };
 
   const value = {

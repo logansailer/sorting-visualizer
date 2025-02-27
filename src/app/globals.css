@@ -25,5 +25,18 @@ body {
 }
 
 .changed-line-color {
-  background-color: green;
+  background-color: #f6ad55;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-animation {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

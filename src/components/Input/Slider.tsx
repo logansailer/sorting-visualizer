@@ -27,7 +27,7 @@ export const Slider = ({
         value={value}
         onChange={handleChange}
         disabled={isDisabled}
-        className="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700"
+        className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-[#f6ad55] bg-gray-700"
       />
       <span className="text-center text-gray-300">Fast</span>
     </div>
