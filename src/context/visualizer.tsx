@@ -126,23 +126,18 @@ export const SortingAlgorithmProvider = ({
     });
 
     const finalTimeout = animations.length * inverseSpeed;
-
-    //plays animation for the final sorted array
     setTimeout(() => {
       Array.from(arrayLines).forEach((line) => {
-        line.classList.remove("bg-purple-800");
-        line.classList.add("pulse-animation", "changed-line-color");
+        line.classList.add("pulse-animation");
       });
 
-      //reset the color of the lines after final animation
       setTimeout(() => {
         Array.from(arrayLines).forEach((line) => {
-          line.classList.remove("pulse-animation", "changed-line-color");
-          line.classList.add("bg-purple-800");
+          line.classList.remove("pulse-animation");
         });
         setIsSorting(false);
         setIsAnimationComplete(true);
-      }, 1000);
+      }, 2000);
     }, finalTimeout);
   };
 

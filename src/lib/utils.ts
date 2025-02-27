@@ -6,7 +6,7 @@ import { generateSelectionSortAnimationArray } from "@/algorithims/selectionSort
 import { sortingAlgorithmType, AnimationArrayType } from "./types";
 
 export const MIN_ANIMATION_SPEED = 10;
-export const MAX_ANIMATION_SPEED = 2000;
+export const MAX_ANIMATION_SPEED = 1500;
 
 //generates random num from interval [min, max]
 export function generateRandomNumberFromInterval(min: number, max: number) {
