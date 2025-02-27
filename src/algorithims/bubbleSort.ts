@@ -1,7 +1,7 @@
-import { AnimationArrayTypes } from "@/lib/types";
+import { AnimationArrayType } from "@/lib/types";
 
 // Bubble sort repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
-function runBubbleSort(array: number[], animations: AnimationArrayTypes) {
+function runBubbleSort(array: number[], animations: AnimationArrayType) {
     for (let i = 0; i < array.length - 1; i++) {
         for (let j = 0; j < array.length - i - 1; j++) {
             animations.push([[j, j + 1], false]);
@@ -17,12 +17,12 @@ function runBubbleSort(array: number[], animations: AnimationArrayTypes) {
 export function generateBubbleSortAnimationArray(
     isSorting: boolean,
     array: number[],
-    runAnimation: (animations: AnimationArrayTypes) => void,
+    runAnimation: (animations: AnimationArrayType) => void,
 ) {
-    if (!isSorting) return;
+    if (isSorting) return;
     if (array.length <= 1) return;
 
-    const animations: AnimationArrayTypes = [];
+    const animations: AnimationArrayType = [];
     const auxArray = array.slice();
     runBubbleSort(auxArray, animations);
     runAnimation(animations);

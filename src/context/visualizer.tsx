@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useEffect, useContext, useState } from "react";
-import { sortingAlgorithmType, AnimationArrayTypes } from "../lib/types";
+import { sortingAlgorithmType, AnimationArrayType } from "../lib/types";
 import {
   MAX_ANIMATION_SPEED,
   generateRandomNumberFromInterval,
@@ -19,7 +19,7 @@ interface SortingAlgorithmContextType {
   isAnimationComplete: boolean;
   setIsAnimationComplete: (isComplete: boolean) => void;
   resetArrayAndAnimation: () => void;
-  runAnimation: (animations: AnimationArrayTypes) => void;
+  runAnimation: (animations: AnimationArrayType) => void;
   requiresReset: boolean;
 }
 
@@ -73,7 +73,7 @@ export const SortingAlgorithmProvider = ({
     setIsSorting(false);
   };
 
-  const runAnimation = (animations: AnimationArrayTypes) => {
+  const runAnimation = (animations: AnimationArrayType) => {
     setIsSorting(true);
 
     const inverseSpeed = (1 / animationSpeed) * 200;

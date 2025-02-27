@@ -51,14 +51,14 @@ export default function Home() {
             </h1>
             <div className="flex items-center justify-center gap-4">
               <Slider
-                isDisabled={isSorting}
                 value={animationSpeed}
                 handleChange={(e) => setAnimationSpeed(Number(e.target.value))}
+                isDisabled={isSorting}
               />
               <Select
                 options={algorithmOptions}
                 defaultValue={selectedAlgorithm}
-                onchange={handleSelectChange}
+                onChange={handleSelectChange}
                 isDisabled={isSorting}
               />
             </div>
