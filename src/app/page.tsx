@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     //header info
-    <main className="absolute top-0 h-screen w-screen bg-gray-950">
+    <main className="absolute top-0 h-dvh w-screen bg-gray-950">
       <div className="flex h-full justify-center">
         <div
           id="content-container"
