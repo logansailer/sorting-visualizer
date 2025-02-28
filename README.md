@@ -1,6 +1,7 @@
 # Sorting Visualizer
 
 This app showcases how different sorting algorithims function.
+Written in TypeScript with Next.js, the visualizer is fully responsive on both web and mobile.
 
 See it live [here](https://sortlogansailer.netlify.app/) 👈
 
