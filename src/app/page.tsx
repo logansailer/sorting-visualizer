@@ -29,6 +29,7 @@ export default function Home() {
     setSelectedAlgorithm(e.target.value as sortingAlgorithmType);
   };
 
+  //runs on button
   const handlePlay = () => {
     if (requiresReset) {
       resetArrayAndAnimation();
@@ -43,6 +44,7 @@ export default function Home() {
   };
 
   return (
+    //header info
     <main className="absolute top-0 h-screen w-screen bg-gray-950">
       <div className="flex h-full justify-center">
         <div
@@ -78,6 +80,7 @@ export default function Home() {
             </button>
           </div>
 
+          {/*Sorting Algorithim Info*/}
           <div className="hidden sm:flex top-[120%] left-0 w-full">
             <div className="flex w-full text-[#f6ad55] p-4 rounded border border-purple-950 bg-gray-900 bg-opacity-10 gap-6">
               <div className="flex flex-col items-start justify-start w-3/4">

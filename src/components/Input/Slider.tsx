@@ -16,6 +16,7 @@ export const Slider = ({
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isDisabled?: boolean;
 }) => {
+  //returns code for slider
   return (
     <div className="flex gap-2 items-center justify-center">
       <span className="text-center text-gray-300">Slow</span>
