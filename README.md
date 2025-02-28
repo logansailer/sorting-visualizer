@@ -1,5 +1,10 @@
+# Sorting Visualizer
 
-First, run the development server:
+This app showcases how different sorting algorithims function.
+
+See it live [here](https://sortlogansailer.netlify.app/) 👈
+
+Or, run it locally via:
 
 ```bash
 npm run dev
