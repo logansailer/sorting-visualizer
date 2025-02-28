@@ -81,7 +81,7 @@ export default function Home() {
           </div>
 
           {/*Sorting Algorithim Info*/}
-          <div className="hidden sm:flex top-[120%] left-0 w-full">
+          <div className="flex top-[120%] left-0 w-full">
             <div className="flex w-full text-[#f6ad55] p-4 rounded border border-purple-950 bg-gray-900 bg-opacity-10 gap-6">
               <div className="flex flex-col items-start justify-start w-3/4">
                 <h3 className="text-lg">
@@ -91,7 +91,7 @@ export default function Home() {
                   {sortingAlgorithmsData[selectedAlgorithm].description}
                 </p>
               </div>
-              <div className="flex flex-col items-start justify-start w-1/4 gap-2">
+              <div className="hidden sm:flex flex-col items-start justify-start w-1/4 gap-2">
                 <h3 className="text-lg">Time Complexity</h3>
                 <div className="flex flex-col gap-2">
                   <p className="flex w-full text-sm text-gray-300">
@@ -117,7 +117,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-[calc(100vh-66px)] w-full">
-            <div className="absolute bottom-[32px] w-full mx-auto left-0 right-0 flex justify-center items-end">
+            <div className="absolute bottom-0 w-full mx-auto left-0 right-0 flex justify-center items-end">
               {arrayToSort.map((value, index) => (
                 <div
                   key={index}
