@@ -9,9 +9,9 @@ export const Slider = ({
   handleChange,
   isDisabled = false,
 }: {
-  min: number;
-  max: number;
-  step: number;
+  min?: number;
+  max?: number;
+  step?: number;
   value: number;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isDisabled?: boolean;
